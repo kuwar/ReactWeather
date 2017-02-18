@@ -58,6 +58,7 @@
 	var Main = __webpack_require__(216);
 	var Weather = __webpack_require__(218);
 	var About = __webpack_require__(219);
+	var Example = __webpack_require__(220);
 
 	ReactDOM.render(React.createElement(
 		Router,
@@ -66,6 +67,7 @@
 			Route,
 			{ path: '/', component: Main },
 			React.createElement(Route, { path: 'about', component: About }),
+			React.createElement(Route, { path: 'example', component: Example }),
 			React.createElement(IndexRoute, { component: Weather })
 		)
 	), document.getElementById('app'));
@@ -24881,14 +24883,36 @@
 
 	var React = __webpack_require__(1);
 
+	var _require = __webpack_require__(159),
+	    Link = _require.Link;
+
 	var Nav = React.createClass({
 	  displayName: 'Nav',
 
 	  render: function render() {
 	    return React.createElement(
-	      'h1',
+	      'div',
 	      null,
-	      'Nav Components'
+	      React.createElement(
+	        'h1',
+	        null,
+	        'Nav Components'
+	      ),
+	      React.createElement(
+	        Link,
+	        { to: '/' },
+	        'Get Weather'
+	      ),
+	      React.createElement(
+	        Link,
+	        { to: '/about' },
+	        'About'
+	      ),
+	      React.createElement(
+	        Link,
+	        { to: '/example' },
+	        'Example'
+	      )
 	    );
 	  }
 	});
@@ -24938,6 +24962,28 @@
 	});
 
 	module.exports = Weather;
+
+/***/ },
+/* 220 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+
+	var Example = React.createClass({
+	  displayName: 'Example',
+
+	  render: function render() {
+	    return React.createElement(
+	      'h2',
+	      null,
+	      'Example Component'
+	    );
+	  }
+	});
+
+	module.exports = Example;
 
 /***/ }
 /******/ ]);
