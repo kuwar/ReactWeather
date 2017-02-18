@@ -6,9 +6,9 @@ var Nav = React.createClass({
     return (
       <div>
         <h1>Nav Components</h1>
-        <Link to="/">Get Weather</Link>
-        <Link to="/about">About</Link>
-        <Link to="/example">Example</Link>
+        <Link to="/" activeClassName="active" activeStyle={{fontWeight: "bold"}}>Get Weather</Link>
+        <Link to="/about" activeClassName="active" activeStyle={{fontWeight: "bold"}}>About</Link>
+        <Link to="/example" activeClassName="active" activeStyle={{fontWeight: "bold"}}>Example</Link>
       </div>
     );
   }
