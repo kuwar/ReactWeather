@@ -30,10 +30,10 @@ var About = React.createClass({
     });
   },
   render: function () {
-    var {isLoadingg, temp, location} = this.state;
+    var {isLoading, temp, location} = this.state;
 
     function renderMessage () {
-      if (isLoadingg) {
+      if (isLoading) {
         return <h3>Fetching weather ...</h3>
       } else if (temp && location) {
         return <WeatherMessage temp={temp} location={location}/>;
