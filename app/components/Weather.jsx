@@ -4,7 +4,7 @@ var WeatherMessage = require('WeatherMessage');
 var openWeatherMap = require('openWeatherMap');
 var ErrorModal = require('ErrorModal');
 
-var About = React.createClass({
+var Weather = React.createClass({
   getInitialState: function () {
     return ({
       isLoading: false
@@ -80,4 +80,4 @@ var About = React.createClass({
   }
 });
 
-module.exports = About;
+module.exports = Weather;
